@@ -1,5 +1,7 @@
 import 'package:easy_sidemenu/easy_sidemenu.dart';
 import 'package:flutter/material.dart';
+import 'package:graduation_project_admin/views/dashboard_view/dashboard_view.dart';
+import 'package:graduation_project_admin/views/manage_user_view/manage_user_view.dart';
 
 class MainScrean extends StatefulWidget {
   const MainScrean({Key? key}) : super(key: key);
@@ -15,22 +17,54 @@ class _MainScreanState extends State<MainScrean> {
     SideMenuItem(
 
       title: 'Dashboard',
+
       onTap: (index, sideMenu) {
         sideMenu.changePage(index);
 
       },
       icon: Icon(Icons.home),
-      badgeContent: Text(
-        '3',
-        style: TextStyle(color: Colors.white),
-      ),
     ),
     SideMenuItem(
-      title: 'Settings',
+      title: 'Manage jobs',
       onTap: (index, sideMenu) {
         sideMenu.changePage(index);
       },
-      icon: Icon(Icons.settings),
+      icon: Icon(Icons.work),
+    ),
+    SideMenuItem(
+      title: 'Manage users',
+      onTap: (index, sideMenu) {
+        sideMenu.changePage(index);
+      },
+      icon: Icon(Icons.people),
+    ),
+    SideMenuItem(
+      title: 'Legal Content',
+      onTap: (index, sideMenu) {
+        sideMenu.changePage(index);
+      },
+      icon: Icon(Icons.content_paste),
+    ),
+    SideMenuItem(
+      title: 'Culture Content',
+      onTap: (index, sideMenu) {
+        sideMenu.changePage(index);
+      },
+      icon: Icon(Icons.content_paste),
+    ),
+    SideMenuItem(
+      title: 'Receive feedback',
+      onTap: (index, sideMenu) {
+        sideMenu.changePage(index);
+      },
+      icon: Icon(Icons.feedback),
+    ),
+    SideMenuItem(
+      title: 'Requests of Helping',
+      onTap: (index, sideMenu) {
+        sideMenu.changePage(index);
+      },
+      icon: Icon(Icons.help),
     ),
     SideMenuItem(
       title: 'Exit',
@@ -63,7 +97,7 @@ class _MainScreanState extends State<MainScrean> {
                   selectedColor: Colors.lightBlue,
                   selectedIconColor: Colors.white,
                   unselectedIconColor: Colors.black54,
-                  backgroundColor: Colors.grey,
+                  backgroundColor: Color(0xFF0C7AB7),
                   selectedTitleTextStyle: TextStyle(color: Colors.white),
                   unselectedTitleTextStyle: TextStyle(color: Colors.black54),
                   iconSize: 20,
@@ -77,9 +111,8 @@ class _MainScreanState extends State<MainScrean> {
                   toggleColor: Colors.black54
               ),
               controller: sideMenu,
-
-
-
+              collapseWidth: 40,
+              displayModeToggleDuration: Duration(milliseconds: 300),
               onDisplayModeChanged: (mode) {
                 print(mode);
               },
@@ -91,16 +124,14 @@ class _MainScreanState extends State<MainScrean> {
             flex: 5,
             child: PageView(
               controller: pageController,
+              physics: NeverScrollableScrollPhysics(),
               children: [
-                Container(
-                  color: Colors.red,
-                ),
-                Container(
-                  color: Colors.blue,
-                ),
+                DashboardView(),
+
                 Container(
                   color: Colors.green,
                 ),
+                ManageUserView(),
               ],
             ),
           ),
