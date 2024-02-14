@@ -14,6 +14,7 @@ class _MainScreanState extends State<MainScrean> {
   PageController pageController = PageController();
   SideMenuController sideMenu = SideMenuController();
   List<SideMenuItem> items = [
+    //todo : احمد
     SideMenuItem(
 
       title: 'Dashboard',
@@ -31,6 +32,8 @@ class _MainScreanState extends State<MainScrean> {
       },
       icon: Icon(Icons.work),
     ),
+
+    // todo:احمد
     SideMenuItem(
       title: 'Manage users',
       onTap: (index, sideMenu) {
@@ -38,6 +41,9 @@ class _MainScreanState extends State<MainScrean> {
       },
       icon: Icon(Icons.people),
     ),
+
+
+    //todo:صباح
     SideMenuItem(
       title: 'Legal Content',
       onTap: (index, sideMenu) {
@@ -52,6 +58,10 @@ class _MainScreanState extends State<MainScrean> {
       },
       icon: Icon(Icons.content_paste),
     ),
+
+
+
+    //todo: فاطمة
     SideMenuItem(
       title: 'Receive feedback',
       onTap: (index, sideMenu) {
@@ -66,6 +76,8 @@ class _MainScreanState extends State<MainScrean> {
       },
       icon: Icon(Icons.help),
     ),
+
+
     SideMenuItem(
       title: 'Exit',
       onTap: (index, _) {},
@@ -120,6 +132,10 @@ class _MainScreanState extends State<MainScrean> {
               items: items,
             ),
           ),
+
+
+          ////////////////////////////////////////////////////////////////
+
           Expanded(
             flex: 5,
             child: PageView(
