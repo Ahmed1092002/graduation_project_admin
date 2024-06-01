@@ -1,8 +1,9 @@
 import 'package:easy_sidemenu/easy_sidemenu.dart';
 import 'package:flutter/material.dart';
 import 'package:graduation_project_admin/views/dashboard_view/dashboard_view.dart';
+import 'package:graduation_project_admin/views/job_view/job_managment.dart';
 import 'package:graduation_project_admin/views/manage_user_view/manage_user_view.dart';
-import 'package:graduation_project_admin/views/recieve_feedback_view/recieve_feedback_view.dart';
+import 'package:graduation_project_admin/views/recieve_feedback_view/Recieve_Requst.dart';
 
 class MainScrean extends StatefulWidget {
   const MainScrean({Key? key}) : super(key: key);
@@ -134,11 +135,9 @@ class _MainScreanState extends State<MainScrean> {
             physics: NeverScrollableScrollPhysics(),
             children: [
               DashboardView(),
-              Container(
-                color: Colors.green,
-              ),
+              JobView(),
               ManageUserView(),
-              RecieveFeedbackView(),
+              RecieveRequst(),
             ],
           ),
         ),

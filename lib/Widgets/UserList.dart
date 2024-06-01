@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:graduation_project_admin/Widgets/LIstIem.dart';
 
 class UserList extends StatelessWidget {
-  const UserList({super.key});
-
+  UserList({super.key, this.firstTitle, this.SecondTitle});
+  String? firstTitle;
+  String? SecondTitle;
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -24,7 +25,6 @@ class UserList extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-
             Text(
               "Users",
               style: TextStyle(fontSize: 20),

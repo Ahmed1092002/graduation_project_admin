@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
 
 class ListItem extends StatelessWidget {
-  const ListItem({super.key});
+  ListItem(
+      {super.key,
+      this.firstTitle,
+      this.SecondTitle,
+      this.onPressedDelete,
+      this.onPressedEdit});
+  String? firstTitle;
+  String? SecondTitle;
+  Function()? onPressedEdit;
+  Function()? onPressedDelete;
 
   @override
   Widget build(BuildContext context) {
@@ -26,19 +35,19 @@ class ListItem extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-          CircleAvatar(
-            backgroundColor: Colors.green,
-            radius: 10,
-          ),
+            CircleAvatar(
+              backgroundColor: Colors.green,
+              radius: 10,
+            ),
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text(
-                  "User Name",
+                  firstTitle!,
                   style: TextStyle(fontSize: 20),
                 ),
                 Text(
-                  "User Email",
+                  SecondTitle!,
                   style: TextStyle(fontSize: 20),
                 ),
               ],
@@ -49,7 +58,7 @@ class ListItem extends StatelessWidget {
               width: 10,
             ),
             ElevatedButton(
-                onPressed: () {},
+                onPressed: onPressedEdit,
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Color(0xFF00FF80),
                     padding:
@@ -63,7 +72,7 @@ class ListItem extends StatelessWidget {
               color: Colors.black,
             ),
             ElevatedButton(
-                onPressed: () {},
+                onPressed: onPressedDelete,
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Color(0xFFFF0000),
                     padding:

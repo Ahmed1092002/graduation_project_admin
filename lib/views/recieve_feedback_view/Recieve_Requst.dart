@@ -3,8 +3,8 @@ import 'package:graduation_project_admin/Widgets/Search.dart';
 import 'package:graduation_project_admin/Widgets/UserList.dart';
 import 'package:graduation_project_admin/Widgets/manegmentButtons.dart';
 
-class RecieveFeedbackView extends StatelessWidget {
-  const RecieveFeedbackView({super.key});
+class RecieveRequst extends StatelessWidget {
+  const RecieveRequst({super.key});
 
   @override
   Widget build(BuildContext context) {
