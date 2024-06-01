@@ -22,13 +22,13 @@ class manegmentButtons extends StatelessWidget {
         ElevatedButton(
             onPressed: () {},
             style: ElevatedButton.styleFrom(
-                primary: Colors.blue,
+                backgroundColor: Colors.blue,
                 padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20)),
             child: Text(Button1!)),
         ElevatedButton(
             onPressed: () {},
             style: ElevatedButton.styleFrom(
-                primary: Colors.blue,
+                backgroundColor: Colors.blue,
                 padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20)),
             child: Text(Button2!)),
       ],

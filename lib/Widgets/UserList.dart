@@ -24,6 +24,7 @@ class UserList extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
+
             Text(
               "Users",
               style: TextStyle(fontSize: 20),

@@ -13,56 +13,55 @@ class Stacked_column_Chart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<ChartDataColumn> chartData = [
-      ChartDataColumn('China', 12, 10),
       ChartDataColumn(
-        'USA',
+        'january',
         14,
-        11,
+
       ),
       ChartDataColumn(
-        'UK',
+        'February',
         16,
-        10,
+
       ),
       ChartDataColumn(
-        'Brazil',
+        'March',
         18,
-        16,
+
       ),
       ChartDataColumn(
-        'India',
+        'April',
         20,
-        15,
+
       ),
       ChartDataColumn(
-        'Russia',
+        'May',
         22,
-        14,
+
       ),
       ChartDataColumn(
-        'Japan',
+        'June',
         24,
-        13,
+
       ),
       ChartDataColumn(
-        'France',
+        'July',
         26,
-        12,
+
       ),
       ChartDataColumn(
-        'Germany',
+        'August',
         28,
-        11,
+
       ),
       ChartDataColumn(
-        'Australia',
+        'September',
         30,
-        10,
+
       ),
       ChartDataColumn(
         'Others',
         29,
-        20,
+
       ),
     ];
 
@@ -88,7 +87,7 @@ class Stacked_column_Chart extends StatelessWidget {
               autoScrollingMode: AutoScrollingMode.start,
             ),
             selectionType: SelectionType.point,
-            title: ChartTitle(text: 'Sales by sales person'),
+            title: ChartTitle(text: 'Users'),
             tooltipBehavior: TooltipBehavior(enable: true),
             crosshairBehavior: CrosshairBehavior(
               enable: true,
@@ -152,16 +151,16 @@ class Stacked_column_Chart extends StatelessWidget {
                       data.y1.toString(),
                   color: Color(0xFF0062FF),
                   yValueMapper: (ChartDataColumn data, _) => data.y1),
-              StackedColumnSeries<ChartDataColumn, String>(
-                  dataSource: chartData,
-                  xValueMapper: (ChartDataColumn data, _) => data.x,
-                  width: 0.2,
-                  spacing: 0.5,
-                  borderRadius: BorderRadius.circular(10),
-                  dataLabelMapper: (ChartDataColumn data, _) =>
-                      data.y2.toString(),
-                  color: Color(0xFF57B8FF),
-                  yValueMapper: (ChartDataColumn data, _) => data.y2),
+              // StackedColumnSeries<ChartDataColumn, String>(
+              //     dataSource: chartData,
+              //     xValueMapper: (ChartDataColumn data, _) => data.x,
+              //     width: 0.2,
+              //     spacing: 0.5,
+              //     borderRadius: BorderRadius.circular(10),
+              //     dataLabelMapper: (ChartDataColumn data, _) =>
+              //         data.y2.toString(),
+              //     color: Color(0xFF57B8FF),
+              //     yValueMapper: (ChartDataColumn data, _) => data.y2),
             ]));
   }
 }

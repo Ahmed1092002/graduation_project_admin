@@ -11,7 +11,7 @@ class DioHelper{
   static init(){
     dio=Dio(
         BaseOptions(
-          baseUrl: 'https://codingarabic.online/api/',
+          baseUrl: 'http://arshdny.runasp.net/api/',
           receiveDataWhenStatusError: true,
 
         )
@@ -24,11 +24,11 @@ class DioHelper{
     required String url,
     Map<String,dynamic>? query,
     String lang='en',
-    String? token,
+
   })async{
     try{
       dio.options.headers = {
-        'Authorization' : 'bearer $token',
+
         "Accept":"application/json"
       };
       return await dio.get(url,queryParameters: query,options:Options (
@@ -47,11 +47,11 @@ class DioHelper{
     Map<String,dynamic>? query,
     dynamic data,
     String lang='en',
-    String? token,
+
   })async{
     try{
       dio.options.headers = {
-        'Authorization' : 'bearer $token',
+
         "Accept":"application/json"
       };
       return   await dio.post(url,queryParameters: query,data: data,options:Options (
@@ -94,11 +94,11 @@ class DioHelper{
     Map<String,dynamic>? query,
     dynamic data,
     String lang='en',
-    String? token,
+
   })async{
     try{
       dio.options.headers = {
-        'Authorization' : 'bearer $token',
+
       };
       return await dio.delete(url,queryParameters: query,data: data);
     }catch(error){

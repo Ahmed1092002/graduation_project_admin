@@ -36,6 +36,7 @@ class DoughnutChartWidget extends StatelessWidget {
                     color: Colors.black),
               ))),
             ],
+
             title: ChartTitle(text: 'Sales by sales person'),
             legend: Legend(
                 isVisible: true,

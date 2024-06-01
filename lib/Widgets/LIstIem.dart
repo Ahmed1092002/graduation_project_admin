@@ -26,6 +26,10 @@ class ListItem extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
+          CircleAvatar(
+            backgroundColor: Colors.green,
+            radius: 10,
+          ),
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -47,7 +51,7 @@ class ListItem extends StatelessWidget {
             ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
-                    primary: Color(0xFF00FF80),
+                    backgroundColor: Color(0xFF00FF80),
                     padding:
                         EdgeInsets.symmetric(horizontal: 50, vertical: 20)),
                 child: Text(
@@ -61,7 +65,7 @@ class ListItem extends StatelessWidget {
             ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
-                    primary: Color(0xFFFF0000),
+                    backgroundColor: Color(0xFFFF0000),
                     padding:
                         EdgeInsets.symmetric(horizontal: 50, vertical: 20)),
                 child: Text(

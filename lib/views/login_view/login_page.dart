@@ -86,7 +86,7 @@ class LoginPage extends StatelessWidget {
                             navigateToScreenAndExit(context, MainScrean());
                           },
                           style: ElevatedButton.styleFrom(
-                            primary: Color(0xFF0C7AB7),
+                            backgroundColor: Color(0xFF0C7AB7),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20),
                             ),
