@@ -5,6 +5,6 @@ class ChartDataColumn {
 
       );
   final String x;
-  final double y1;
+  final int y1;
 
 }

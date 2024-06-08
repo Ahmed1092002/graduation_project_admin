@@ -3,10 +3,14 @@ import 'package:graduation_project_admin/views/dashboard_view/class/chartDataDou
 import 'package:syncfusion_flutter_charts/charts.dart';
 
 class DoughnutChartWidget extends StatelessWidget {
-  const DoughnutChartWidget({
+   DoughnutChartWidget({
     super.key,
-  });
+    required this.chartData,
+     required this.title,
 
+  });
+  final String title;
+List<ChartData> ? chartData;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -29,15 +33,15 @@ class DoughnutChartWidget extends StatelessWidget {
               CircularChartAnnotation(
                   widget: Container(
                       child: Text(
-                '70%',
+                title,
                 style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black),
+                    color: Colors.blue),
               ))),
             ],
 
-            title: ChartTitle(text: 'Sales by sales person'),
+            title: ChartTitle(text: 'Users By Country',textStyle: TextStyle(color: Colors.blue,fontSize: 25)),
             legend: Legend(
                 isVisible: true,
                 position: LegendPosition.left,
@@ -54,7 +58,7 @@ class DoughnutChartWidget extends StatelessWidget {
                   final ChartData data = doughnutSeries.dataSource![index];
                   return Container(
                     height: 30,
-                    width: 100,
+                    width: 160,
                     child: Row(
                       children: [
                         Container(
@@ -77,16 +81,7 @@ class DoughnutChartWidget extends StatelessWidget {
             series: <CircularSeries>[
               DoughnutSeries<ChartData, String>(
                 radius: '100%',
-                  dataSource: <ChartData>[
-                    ChartData('Gold', 70, Colors.yellow),
-                    ChartData('Silver', 80, Colors.grey),
-                    ChartData('Platinum', 90, Colors.blue),
-                    ChartData('Diamond', 100, Colors.green),
-                    ChartData('Ruby', 110, Colors.red),
-                    ChartData('Pearl', 120, Colors.pink),
-                    ChartData('Coral', 130, Colors.orange),
-                    ChartData('Emerald', 140, Colors.teal),
-                  ],
+                  dataSource: chartData,
                   pointColorMapper: (ChartData data, _) => data.color,
                   dataLabelMapper: (ChartData data, _) => data.x,
                   xValueMapper: (ChartData data, _) => data.x,

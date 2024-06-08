@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 
 class CustomContainerDashBoard extends StatelessWidget {
-  const CustomContainerDashBoard({
+   CustomContainerDashBoard({
     super.key,
-  });
+    this.title,
+    this.count,
+     this.imageUrl,
 
+  });
+String ? title;
+String? imageUrl;
+int ? count;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -29,11 +35,11 @@ class CustomContainerDashBoard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Text(
-                "Total Users",
-                style: TextStyle(fontSize: 20),
+                title!,
+                style: TextStyle(fontSize: 20,color: Colors.blue),
               ),
               Text(
-                "100",
+                count.toString(),
                 style: TextStyle(fontSize: 20),
               ),
             ],
@@ -42,7 +48,7 @@ class CustomContainerDashBoard extends StatelessWidget {
             radius: 40,
             backgroundColor: Color(0xFFE5EEFF),
             child: Image.asset(
-              "assets/image/person.png",
+              imageUrl!,
               width: 50,
               height: 50,
             ),

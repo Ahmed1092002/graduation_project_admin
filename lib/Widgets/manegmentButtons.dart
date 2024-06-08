@@ -28,13 +28,13 @@ class manegmentButtons extends StatelessWidget {
             style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue,
                 padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20)),
-            child: Text(Button1!)),
+            child: Text(Button1!, style: TextStyle(fontSize: 20, color: Colors.white))),
         ElevatedButton(
             onPressed: onPressedSearch,
             style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue,
                 padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20)),
-            child: Text(Button2!)),
+            child: Text(Button2!, style: TextStyle(fontSize: 20, color: Colors.white))),
       ],
     );
   }

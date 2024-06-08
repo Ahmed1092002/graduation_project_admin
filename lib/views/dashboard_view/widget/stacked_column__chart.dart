@@ -3,68 +3,24 @@ import 'package:graduation_project_admin/views/dashboard_view/widget/doughnut_ch
 import 'package:syncfusion_flutter_charts/charts.dart';
 
 import '../class/ChartDataColumn.dart';
+import '../model/NumberOfUsersPerMonthModel.dart';
 
 class Stacked_column_Chart extends StatelessWidget {
-  const Stacked_column_Chart({
+   Stacked_column_Chart({
     super.key,
+    required this.numberOfUsersPerMonthModel,
+
   });
+  List<NumberOfUsersPerMonthModel> ? numberOfUsersPerMonthModel;
 
 
   @override
   Widget build(BuildContext context) {
-    final List<ChartDataColumn> chartData = [
-      ChartDataColumn(
-        'january',
-        14,
-
-      ),
-      ChartDataColumn(
-        'February',
-        16,
-
-      ),
-      ChartDataColumn(
-        'March',
-        18,
-
-      ),
-      ChartDataColumn(
-        'April',
-        20,
-
-      ),
-      ChartDataColumn(
-        'May',
-        22,
-
-      ),
-      ChartDataColumn(
-        'June',
-        24,
-
-      ),
-      ChartDataColumn(
-        'July',
-        26,
-
-      ),
-      ChartDataColumn(
-        'August',
-        28,
-
-      ),
-      ChartDataColumn(
-        'September',
-        30,
-
-      ),
-      ChartDataColumn(
-        'Others',
-        29,
-
-      ),
-    ];
-
+    List<ChartDataColumn> ? chartDataColumn;
+    chartDataColumn = numberOfUsersPerMonthModel!.map((e) => ChartDataColumn(
+      e.yearMonth!,
+      e.count!,
+    )).toList();
     return Container(
         width: 800,
         height: 400,
@@ -87,7 +43,7 @@ class Stacked_column_Chart extends StatelessWidget {
               autoScrollingMode: AutoScrollingMode.start,
             ),
             selectionType: SelectionType.point,
-            title: ChartTitle(text: 'Users'),
+            title: ChartTitle(text: 'Users',textStyle: TextStyle(color: Colors.blue,fontSize: 25)),
             tooltipBehavior: TooltipBehavior(enable: true),
             crosshairBehavior: CrosshairBehavior(
               enable: true,
@@ -142,7 +98,7 @@ class Stacked_column_Chart extends StatelessWidget {
             enableSideBySideSeriesPlacement: true,
             series: <CartesianSeries>[
               StackedColumnSeries<ChartDataColumn, String>(
-                  dataSource: chartData,
+                  dataSource: chartDataColumn,
                   xValueMapper: (ChartDataColumn data, _) => data.x,
                   width: 0.2,
                   spacing: 0.5,

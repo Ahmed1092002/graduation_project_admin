@@ -5,13 +5,19 @@ class ListItem extends StatelessWidget {
       {super.key,
       this.firstTitle,
       this.SecondTitle,
+      this.BottomTitle1,
+      this.BottomTitle2,
       this.onPressedDelete,
+        this.isPending = false,
+
       this.onPressedEdit});
   String? firstTitle;
   String? SecondTitle;
   Function()? onPressedEdit;
   Function()? onPressedDelete;
-
+  String?  BottomTitle1;
+  String?  BottomTitle2;
+bool isPending = false;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -20,7 +26,7 @@ class ListItem extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: Colors.white,
-          border: Border.all(color: Colors.black),
+          border: Border.all(color: Colors.black.withOpacity(0.5)),
           boxShadow: [
             BoxShadow(
               color: Colors.grey.withOpacity(0.5),
@@ -35,9 +41,12 @@ class ListItem extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            CircleAvatar(
+            isPending?     CircleAvatar(
               backgroundColor: Colors.green,
               radius: 10,
+            ):SizedBox(
+              width: 0,
+              height: 0,
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -54,8 +63,10 @@ class ListItem extends StatelessWidget {
             ),
             VerticalDivider(
               thickness: 2,
-              color: Colors.black,
+              color: Colors.black.withOpacity(0.5),
               width: 10,
+              endIndent: 10,
+              indent: 10,
             ),
             ElevatedButton(
                 onPressed: onPressedEdit,
@@ -64,12 +75,15 @@ class ListItem extends StatelessWidget {
                     padding:
                         EdgeInsets.symmetric(horizontal: 50, vertical: 20)),
                 child: Text(
-                  "Edit",
+                  BottomTitle1!,
                   style: TextStyle(fontSize: 20, color: Colors.white),
                 )),
             VerticalDivider(
               thickness: 2,
-              color: Colors.black,
+              color: Colors.black.withOpacity(0.5),
+              width: 10,
+              endIndent: 10,
+              indent: 10,
             ),
             ElevatedButton(
                 onPressed: onPressedDelete,
@@ -78,7 +92,7 @@ class ListItem extends StatelessWidget {
                     padding:
                         EdgeInsets.symmetric(horizontal: 50, vertical: 20)),
                 child: Text(
-                  "Delete",
+                  BottomTitle2!,
                   style: TextStyle(fontSize: 20, color: Colors.white),
                 )),
           ],

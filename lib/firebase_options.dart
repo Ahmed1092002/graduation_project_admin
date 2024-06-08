@@ -41,46 +41,47 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBKRCGpQc4FISQtcJ4hRFQ2CQfBOoIqL7g',
-    appId: '1:323139323227:web:b86d7d02cee647bae8867e',
-    messagingSenderId: '323139323227',
-    projectId: 'refugee-d38eb',
-    authDomain: 'refugee-d38eb.firebaseapp.com',
-    storageBucket: 'refugee-d38eb.appspot.com',
+    apiKey: 'AIzaSyCdFa1SM0D8Z3qw4Rh_AcCok7GsgvmUc40',
+    appId: '1:457416420906:web:86c700fd3b96b28a371d53',
+    messagingSenderId: '457416420906',
+    projectId: 'newjop-1e222',
+    authDomain: 'newjop-1e222.firebaseapp.com',
+    storageBucket: 'newjop-1e222.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCA_MGPRfagMsUcJNdRtgL0XNfHgEQfnBA',
-    appId: '1:323139323227:android:dfa882adec017cd1e8867e',
-    messagingSenderId: '323139323227',
-    projectId: 'refugee-d38eb',
-    storageBucket: 'refugee-d38eb.appspot.com',
+    apiKey: 'AIzaSyBBPGpMPisf55HAcReMQN_u9qEtFJ5qWoA',
+    appId: '1:457416420906:android:58b2f355495a68a9371d53',
+    messagingSenderId: '457416420906',
+    projectId: 'newjop-1e222',
+    storageBucket: 'newjop-1e222.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDWcW2zUB2RZOYUypvt9KIVQAS5qdXCVaM',
-    appId: '1:323139323227:ios:19b2ce752ae6e1d6e8867e',
-    messagingSenderId: '323139323227',
-    projectId: 'refugee-d38eb',
-    storageBucket: 'refugee-d38eb.appspot.com',
+    apiKey: 'AIzaSyC-e9C2tnEUGhYNkj6y9GtZo5yybmMgQyU',
+    appId: '1:457416420906:ios:c01f0e4b103cb8f9371d53',
+    messagingSenderId: '457416420906',
+    projectId: 'newjop-1e222',
+    storageBucket: 'newjop-1e222.appspot.com',
     iosBundleId: 'com.example.graduationProjectAdmin',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDWcW2zUB2RZOYUypvt9KIVQAS5qdXCVaM',
-    appId: '1:323139323227:ios:19b2ce752ae6e1d6e8867e',
-    messagingSenderId: '323139323227',
-    projectId: 'refugee-d38eb',
-    storageBucket: 'refugee-d38eb.appspot.com',
+    apiKey: 'AIzaSyC-e9C2tnEUGhYNkj6y9GtZo5yybmMgQyU',
+    appId: '1:457416420906:ios:c01f0e4b103cb8f9371d53',
+    messagingSenderId: '457416420906',
+    projectId: 'newjop-1e222',
+    storageBucket: 'newjop-1e222.appspot.com',
     iosBundleId: 'com.example.graduationProjectAdmin',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyBKRCGpQc4FISQtcJ4hRFQ2CQfBOoIqL7g',
-    appId: '1:323139323227:web:2be6b5193b732df0e8867e',
-    messagingSenderId: '323139323227',
-    projectId: 'refugee-d38eb',
-    authDomain: 'refugee-d38eb.firebaseapp.com',
-    storageBucket: 'refugee-d38eb.appspot.com',
+    apiKey: 'AIzaSyCdFa1SM0D8Z3qw4Rh_AcCok7GsgvmUc40',
+    appId: '1:457416420906:web:d83e14b9bf9ea5ad371d53',
+    messagingSenderId: '457416420906',
+    projectId: 'newjop-1e222',
+    authDomain: 'newjop-1e222.firebaseapp.com',
+    storageBucket: 'newjop-1e222.appspot.com',
   );
+
 }
