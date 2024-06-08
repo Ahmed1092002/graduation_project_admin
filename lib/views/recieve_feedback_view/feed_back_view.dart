@@ -82,17 +82,17 @@ SizedBox(
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                            "FeedBack Id : ${cubit.feedbackModel![reversedIndex].feedbackID.toString()}",
+                                            "FeedBack Id : ${cubit.feedbackModel![index].feedbackID.toString()}",
                                             style: TextStyle(fontSize: 20),
                                           ),
                                           Text(
-                                            "massage: ${cubit.feedbackModel![reversedIndex].message!}",
+                                            "massage: ${cubit.feedbackModel![index].message!}",
                                             style: TextStyle(fontSize: 20),
                                           ),
 
 
                                           Text(
-                                            "Rating: ${cubit.feedbackModel![reversedIndex].rating.toString()}",
+                                            "Rating: ${cubit.feedbackModel![index].rating.toString()}",
                                             style: TextStyle(fontSize: 20),
                                           ),
 
