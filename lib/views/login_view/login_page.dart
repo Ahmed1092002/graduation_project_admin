@@ -17,7 +17,21 @@ TextEditingController passwordController = TextEditingController();
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => LoginCubit(),
-      child: BlocBuilder<LoginCubit, LoginState>(
+      child: BlocConsumer<LoginCubit, LoginState>(
+  listener: (context, state) {
+if (state is LoginFailure) {
+  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+    content: Text('Error',
+    style: TextStyle(
+      color: Colors.white,
+      fontSize: 20,
+    ) ,),
+    backgroundColor: Colors.red,
+  ));
+}
+  },
+  builder: (context, state) {
+    return BlocBuilder<LoginCubit, LoginState>(
   builder: (context, state) {
    final  cubit = LoginCubit.get(context);
     return Scaffold(
@@ -125,7 +139,9 @@ controller: userNameController,
                               if (formKey.currentState!.validate()) {
                                 formKey.currentState!.save();
                            await     cubit.login(userName: userNameController.text, password: passwordController.text);
-                                navigateToScreenAndExit(context, MainScrean());
+                            if (cubit.userModel!=null){
+                              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainScrean()));
+                            }
                               }
                               else {
                                 autovalidateMode = AutovalidateMode.always;
@@ -166,6 +182,8 @@ controller: userNameController,
 
 
       );
+  },
+);
   },
 ),
     );
