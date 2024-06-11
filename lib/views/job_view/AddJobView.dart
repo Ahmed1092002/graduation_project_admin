@@ -352,6 +352,7 @@ class _AddJobViewState extends State<AddJobView> {
                           if (widget.AppBarTitle == 'Edit Job') {
                             await cubit.editJob(jobModel);
                           } else {
+
                             await cubit.addJob(jobModel);
                           }
                           navigateToScreen(context, MainScrean());
